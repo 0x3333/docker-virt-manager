@@ -1,4 +1,4 @@
-from debian:sid
+from debian:bullseye-slim
 
 run  export DEBIAN_FRONTEND=noninteractive \
  &&  apt-get update \

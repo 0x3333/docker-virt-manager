@@ -62,7 +62,7 @@ run_virtmanager() {
 	--env=TRACE \
 	--env=DISPLAY=$XIP:$XDISPLAY \
 	--env=SSH_AGENT_SOCKET=$XIP:$XSSH \
-	steigr/virt-manager run
+	0x3333/virt-manager run
 }
 
 main() {
