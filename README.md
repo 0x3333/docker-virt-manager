@@ -17,3 +17,8 @@ To build the image:
 ## Service
 
 `SSH_AUTH_AGENT` and `X11-Socket` are forwarded into the container. You may log into every host you may login from your OSX/macOS machine.
+
+## Fork Update
+
+I updated the image to use Debian testing release(Currently bullseye). I also changed the image name to `0x3333/virt-manager`.
+
