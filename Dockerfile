@@ -1,10 +1,9 @@
-from debian:bullseye-slim
+FROM debian:bullseye-slim
 
-run  export DEBIAN_FRONTEND=noninteractive \
+RUN  export DEBIAN_FRONTEND=noninteractive \
  &&  apt-get update \
- &&  ( until apt-get install -y libgl1-mesa-dri libgl1-mesa-glx openssh-client ssh-askpass socat virt-manager virt-manager; do true; done ) \
- &&  apt-get clean \
- &&  rm -rf /var/lib/apt/lists
+ &&  apt-get install -y libgl1-mesa-dri libgl1-mesa-glx openssh-client ssh-askpass socat virt-manager virt-manager \
+ &&  apt-get clean
 
-add docker-entrypoint.sh /usr/local/bin/virt-manager
-entrypoint ["virt-manager"]
+ADD docker-entrypoint.sh /usr/local/bin/virt-manager
+ENTRYPOINT ["virt-manager"]
